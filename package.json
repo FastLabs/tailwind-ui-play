@@ -1,0 +1,31 @@
+{
+  "name": "tailwind-ui-play",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "shadow:watch": "shadow-cljs watch app",
+    "shadow:release": "shadow-cljs release app",
+    "postcss:build": "cross-env TAILWIND_MODE=build postcss src/css/tailwind.css -o ./resources/public/css/main.css --verbose",
+    "postcss:watch": "cross-env TAILWIND_MODE=watch postcss src/css/tailwind.css -o ./resources/public/css/main.css --verbose -w",
+    "postcss:release": "cross-env NODE_ENV=production postcss src/css/tailwind.css -o ./resources/public/css/main.css --verbose",
+    "dev": "run-p -l *:watch",
+    "release": "run-s *:release"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "shadow-cljs": "2.18.0",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.23",
+    "autoprefixer": "^10.4.4"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^1.0.6",
+    "@tailwindcss/forms": "^0.5.0",
+    "tailwindcss": "^3.0.24",
+    "cross-env": "^7.0.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  }
+}
