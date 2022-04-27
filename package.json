@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "shadow:watch": "shadow-cljs watch app",
-    "shadow:release": "shadow-cljs release app",
+    "shadow:watch": "shadow-cljs watch frontend",
+    "shadow:release": "shadow-cljs release frontend",
     "postcss:build": "cross-env TAILWIND_MODE=build postcss src/css/tailwind.css -o ./resources/public/css/main.css --verbose",
     "postcss:watch": "cross-env TAILWIND_MODE=watch postcss src/css/tailwind.css -o ./resources/public/css/main.css --verbose -w",
     "postcss:release": "cross-env NODE_ENV=production postcss src/css/tailwind.css -o ./resources/public/css/main.css --verbose",
