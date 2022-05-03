@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-.simple {
-    color: red;
+.form-page {
+    .page-section {
+        @apply mt-8 max-w-3xl mx-auto grid grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-3;
+    }
+}
+
+.form-title {
+    @apply text-sm font-medium text-gray-500;
+}
+
+.form-text {
+    @apply sm:col-span-1;
+    .content {
+        @apply mt-1 text-sm text-gray-900;
+    }
+}
+
+.form-memo {
+    @apply sm:col-span-2;
+
+    .area-wrap {
+       @apply mt-1 text-sm text-gray-900;
+    }
+    textarea {
+        @apply shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md;
+    }
+}
+
+.action-button {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-rose-600 hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900;
 }
